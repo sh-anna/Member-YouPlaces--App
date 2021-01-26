@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './userItem.css';
 import Avatar from "../../../shared/components/uiElements/avatar/avatar"
 import Card from "../../../shared/components/uiElements/card/card"
+import './userItem.css';
 
 const UserItem = props => {
     return(
@@ -19,7 +19,7 @@ const UserItem = props => {
                 </Link>
             </Card>
         </li>
-        );
+    );
 };
 
 
