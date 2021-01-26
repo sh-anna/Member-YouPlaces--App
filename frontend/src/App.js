@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import './App.css';
-import NewPlace from './places/pages/NewPlace';
+import NewPlace from './places/pages/newPlace';
 import Users from "./user/pages/users";
 
 
