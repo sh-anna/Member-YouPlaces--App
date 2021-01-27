@@ -3,28 +3,31 @@ import UserItem from '../userItem/userItem';
 import Card from '../../../shared/components/uiElements/card/card';
 import './userList.css';
 
-const UserList = props => {
-    if (props.items.lenght === 0) {
-        return (
-            <div className="center">
-                <Card>
-                    <h2>No users found.</h2>
-                </Card>
-            </div>
-        );
+const UsersList = props => {
+    if (props.items.length === 0) {
+      return (
+        <div className="center">
+          <Card>
+            <h2>No users found.</h2>
+          </Card>
+        </div>
+      );
     }
+  
     return (
-        <ul className="users-list">
-            {props.items.map(user =>{
-                return <UserItem 
-                key={user.id} 
-                id={user.id} 
-                image={user.image} 
-                name={user.name} 
-                placeCount={user.places} />;
-            })}
-        </ul>
+      <ul className="users-list">
+        {props.items.map(user => (
+          <UserItem
+            key={user.id}
+            id={user.id}
+            image={user.image}
+            name={user.name}
+            placeCount={user.places}
+          />
+        ))}
+      </ul>
     );
-};
-
-export default UserList;
+  };
+  
+  export default UsersList;
+  

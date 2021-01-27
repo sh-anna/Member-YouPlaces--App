@@ -8,6 +8,7 @@ import {
 import './App.css';
 import NewPlace from './places/pages/newPlace';
 import Users from "./user/pages/users";
+import UserPlaces from "./places/pages/userPlaces"
 import MainNavigation from './shared/components/navigation/mainNavigatin/mainNavigation';
 
 
@@ -20,6 +21,9 @@ const App = () => {
           <Route path="/" exact>
             <Users />
           </Route>
+          <Route path="/:userId/places" exact>
+            <UserPlaces />
+          </Route>
           <Route path="/places/new" exact>
             <NewPlace />
           </Route>
@@ -31,3 +35,4 @@ const App = () => {
 };
 
 export default App;
+
