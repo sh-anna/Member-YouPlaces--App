@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import PlaceList from '../../places/components/placeList/placeList';
+import './newPlacec.css';
+
 
 const DUMMY_PLACES = [
         {
