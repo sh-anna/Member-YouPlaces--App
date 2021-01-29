@@ -56,7 +56,7 @@ const formReducer = (state, action) => {
 
     const placeSubmitHandler = event => {
       event.preventDefault();
-      console.log(formState.inputs);
+      console.log(formState.inputs); //send this to the backend
     }
   
     return (
@@ -76,6 +76,14 @@ const formReducer = (state, action) => {
           label="Description"
           validators={[VALIDATOR_MINLENGTH(5)]}
           errorText="Please enter a valid description (at least 5 characters)."
+          onInput={inputHandler}
+        />
+        <Input
+          id="address"
+          element="input"
+          label="Address"
+          validators={[VALIDATOR_REQUIRE()]}
+          errorText="Please enter a valid address"
           onInput={inputHandler}
         />
         <Button type="submit" disabled={!formState.isValid}>
