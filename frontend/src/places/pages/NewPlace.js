@@ -3,6 +3,7 @@ import Input from '../../shared/components/formElements/input/input';
 import Button from '../../shared/components/formElements/button';
 import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from '../../shared/util/validators';
 import './newPlacec.css';
+import './placeForm.css';
 
 
 
@@ -39,6 +40,10 @@ const formReducer = (state, action) => {
         },
         description: {
           value: '',
+          isValid: false
+        },
+        address: {
+          value:'',
           isValid: false
         }
       },
