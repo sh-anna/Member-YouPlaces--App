@@ -10,11 +10,11 @@ let DUMMY_PLACES = [
         title: 'Yaffa',
         description: 'The southern and oldest part of Tel Aviv-Yafo, is an ancient port city in Israel.',
         imageUrl: 'https://www.namalyafo.co.il/wp-content/uploads/2019/02/DJI_0836doronsaar-e1574798133810.jpg?x87381',
-        address: 'nowadays has turned into one of the quarters of Tel Aviv',
         location: {
           lat: 32.109333,
           lng: 34.855499
         },
+        address: 'Rehov Namal Yafo 68 Tel Aviv-Yafo',
         creator: 'u1'
       }
 ];
@@ -69,7 +69,7 @@ const createPlace = async (req, res, next) => {
 
   // const title = req.body.title;
   const createdPlace = {
-    id: uuidv4(),
+    id: uuid(),
     title,
     description,
     location: coordinates,
