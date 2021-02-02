@@ -1,15 +1,7 @@
-const uuid = require('uuid/v4');
 const { validationResult } = require('express-validator');
 const HttpError = require('../models/http.error');
 const User = require('../models/user');
-const DUMMY_USERS = [
-  {
-    id: 'u1',
-    name: 'AnnA',
-    email: 'test@gmail.com',
-    password: '123456'
-  }
-];
+
 const getUsers = async (req, res, next) => {
   let users;
   try {
@@ -31,7 +23,7 @@ const signup = async (req, res, next) => {
       new HttpError('Invalid inputs passed, please check your data.', 422)
     );
   }
-  const { name, email, password, places } = req.body;
+  const { name, email, password } = req.body;
 
   let existingUser
   try {
@@ -55,9 +47,9 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     name,
     email,
-    image: 'https://cdn.pixabay.com/photo/2018/02/12/10/45/heart-3147976__340.jpg',
+    image: 'https://cdn4.iconfinder.com/data/icons/negative-character-traits-alphabet-c-part-1/274/negative-c007-512.png',
     password,
-    places
+    places: []
   });
 
   try {
@@ -87,6 +79,7 @@ const login = async (req, res, next) => {
     );
     return next(error);
   }
+
   if (!existingUser || existingUser.password !== password) {
     const error = new HttpError(
       'Invalid credentials, could not log you in.',
@@ -94,8 +87,10 @@ const login = async (req, res, next) => {
     );
     return next(error);
   }
+
   res.json({message: 'Logged in!'});
 };
+
 exports.getUsers = getUsers;
 exports.signup = signup;
 exports.login = login;
