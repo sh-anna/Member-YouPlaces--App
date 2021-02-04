@@ -10,7 +10,7 @@ import NewPlace from './places/pages/NewPlace';
 import Users from "./user/pages/users";
 import UserPlaces from "./places/pages/userPlaces";
 import UpdatePlace from './places/pages/updatePlace';
-import Auth from './user/pages/auth/autth';
+import Auth from './user/pages/auth/auth';
 import MainNavigation from './shared/components/navigation/mainNavigatin/mainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 
