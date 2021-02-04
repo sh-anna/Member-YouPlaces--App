@@ -3,10 +3,7 @@ import Input from '../../shared/components/formElements/input/input';
 import Button from '../../shared/components/formElements/button';
 import { VALIDATOR_REQUIRE, VALIDATOR_MINLENGTH } from '../../shared/util/validators';
 import {useForm} from '../../shared/hooks/form-hook.js';
-
 import './placeForm.css';
-
-
 
 const NewPlace = () => {
   const [formState, inputHandler] = useForm(

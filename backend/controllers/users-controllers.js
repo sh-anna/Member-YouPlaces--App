@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-const HttpError = require('../models/http.error');
+const HttpError = require('../models/http-error');
 const User = require('../models/user');
 
 const getUsers = async (req, res, next) => {
@@ -43,12 +43,12 @@ const signup = async (req, res, next) => {
     );
     return next(error);
   }
-  
+
   const createdUser = new User({
     name,
     email,
     image: 'https://cdn4.iconfinder.com/data/icons/negative-character-traits-alphabet-c-part-1/274/negative-c007-512.png',
-    password,
+    password, 
     places: []
   });
 

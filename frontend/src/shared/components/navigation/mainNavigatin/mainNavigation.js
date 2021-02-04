@@ -8,9 +8,11 @@ import './mainNavigation.css';
 
 const MainNavigation = props => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
+
   const openDrawerHandler = () => {
     setDrawerIsOpen(true);
   };
+
   const closeDrawerHandler = () => {
     setDrawerIsOpen(false);
   };
@@ -23,9 +25,12 @@ const MainNavigation = props => {
           <NavLinks />
         </nav>
       </SideDrawer>
-      
+
       <MainHeader>
-        <button className="main-navigation__menu-btn" onClick={openDrawerHandler}>
+        <button
+          className="main-navigation__menu-btn"
+          onClick={openDrawerHandler}
+        >
           <span />
           <span />
           <span />
@@ -42,5 +47,3 @@ const MainNavigation = props => {
 };
 
 export default MainNavigation;
-
-

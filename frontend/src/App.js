@@ -6,8 +6,8 @@ import {
   Switch 
 } from 'react-router-dom';
 import './App.css';
-import NewPlace from './places/pages/NewPlace';
 import Users from "./user/pages/users";
+import NewPlace from './places/pages/NewPlace';
 import UserPlaces from "./places/pages/userPlaces";
 import UpdatePlace from './places/pages/updatePlace';
 import Auth from './user/pages/auth/auth';
