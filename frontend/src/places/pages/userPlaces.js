@@ -18,32 +18,33 @@ const UserPlaces = () => {
       try {
         const responseData = await sendRequest(
           `http://localhost:8080/api/places/user/${userId}`
-        );
-        setLoadedPlaces(responseData.places);
-      } catch (err) {}
+          );
+          setLoadedPlaces(responseData.places);
+        } catch (err) {}
+      };
+      fetchPlaces();
+    }, [sendRequest, userId]);
+  
+    const placeDeletedHandler = deletedPlaceId => {
+      setLoadedPlaces(prevPlaces =>
+        prevPlaces.filter(place => place.id !== deletedPlaceId)
+      );
     };
-    fetchPlaces();
-  }, [sendRequest, userId]);
-
-  const placeDeletedHandler = deletedPlaceId => {
-    setLoadedPlaces(prevPlaces =>
-      prevPlaces.filter(place => place.id !== deletedPlaceId)
+  
+    return (
+      <React.Fragment>
+        <ErrorModal error={error} onClear={clearError} />
+        {isLoading && (
+          <div className="center">
+            <LoadingSpinner />
+          </div>
+        )}
+        {!isLoading && loadedPlaces && (
+          <PlaceList items={loadedPlaces} onDeletePlace={placeDeletedHandler} />
+        )}
+      </React.Fragment>
     );
   };
-
-  return (
-    <React.Fragment>
-      <ErrorModal error={error} onClear={clearError} />
-      {isLoading && (
-        <div className="center">
-          <LoadingSpinner />
-        </div>
-      )}
-      {!isLoading && loadedPlaces && (
-        <PlaceList items={loadedPlaces} onDeletePlace={placeDeletedHandler} />
-      )}
-    </React.Fragment>
-  );
-};
-
-export default UserPlaces;
+  
+  export default UserPlaces;
+  

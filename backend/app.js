@@ -35,10 +35,9 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || 'An unknown error occurred!' });
 });
 
-
-
 mongoose
-.connect('mongodb+srv://manu:tygarin1@cluster0.iiirq.mongodb.net/mern?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+// .connect('mongodb+srv://mern:tygarin1@cluster0.iiirq.mongodb.net/mern?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
+.connect('mongodb+srv://anna:tygarin1@cluster0.iiirq.mongodb.net/mern?retryWrites=true&w=majority', { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true })
 .then(() => {
   app.listen(8080);
 })

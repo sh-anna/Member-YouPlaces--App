@@ -5,7 +5,6 @@ import {
   Redirect, 
   Switch 
 } from 'react-router-dom';
-import './App.css';
 import Users from "./user/pages/users";
 import NewPlace from './places/pages/NewPlace';
 import UserPlaces from "./places/pages/userPlaces";
@@ -13,7 +12,7 @@ import UpdatePlace from './places/pages/updatePlace';
 import Auth from './user/pages/auth/auth';
 import MainNavigation from './shared/components/navigation/mainNavigatin/mainNavigation';
 import { AuthContext } from './shared/context/auth-context';
-
+import './App.css';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
