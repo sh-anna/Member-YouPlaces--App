@@ -23,6 +23,7 @@ const signup = async (req, res, next) => {
       new HttpError('Invalid inputs passed, please check your data.', 422)
     );
   }
+
   const { name, email, password } = req.body;
 
   let existingUser;
@@ -47,9 +48,9 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     name,
     email,
-    image: 'https://cdn4.iconfinder.com/data/icons/negative-character-traits-alphabet-c-part-1/274/negative-c007-512.png',
+    image: req.file.path,
     password,
-    places: []
+    places: [],
   });
 
   try {
