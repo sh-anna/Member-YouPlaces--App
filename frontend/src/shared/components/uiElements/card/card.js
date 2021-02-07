@@ -4,6 +4,7 @@ import React from 'react';
 // import "../../../../user/components/userItem/userItem.css";
 import './card.css';
 
+
 const Card = props => {
   return (
     <div className={`card ${props.className}`} style={props.style}>

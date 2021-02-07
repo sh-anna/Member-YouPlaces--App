@@ -2,7 +2,6 @@ import React, { useReducer, useEffect } from 'react';
 import { validate } from '../../../util/validators';
 import './input.css';
 
-
 const inputReducer = (state, action) => {
   switch (action.type) {
     case 'CHANGE':
@@ -15,7 +14,7 @@ const inputReducer = (state, action) => {
       return {
         ...state,
         isTouched: true
-      }
+      };
     }
     default:
       return state;
@@ -33,7 +32,7 @@ const Input = props => {
   const { value, isValid } = inputState;
 
   useEffect(() => {
-    onInput(id, value, isValid)
+    onInput(id, value, isValid);
   }, [id, value, isValid, onInput]);
 
   const changeHandler = event => {
@@ -72,7 +71,8 @@ const Input = props => {
 
   return (
     <div
-      className={`form-control ${!inputState.isValid && inputState.isTouched &&
+      className={`form-control ${!inputState.isValid &&
+        inputState.isTouched &&
         'form-control--invalid'}`}
     >
       <label htmlFor={props.id}>{props.label}</label>

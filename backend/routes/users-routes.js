@@ -6,6 +6,8 @@ const router = express.Router();
 
 router.get('/', usersController.getUsers);
 
+router.get('/', usersController.getUsers);
+
 router.post(
   '/signup',
   fileUpload.single('image'),
@@ -24,4 +26,3 @@ router.post(
 router.post('/login', usersController.login);
 
 module.exports = router;
-

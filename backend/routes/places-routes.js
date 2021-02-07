@@ -40,4 +40,3 @@ router.patch(
 router.delete('/:pid', placesControllers.deletePlace);
 
 module.exports = router;
-

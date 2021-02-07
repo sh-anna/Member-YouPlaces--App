@@ -6,7 +6,6 @@ import LoadingSpinner from '../../shared/components/uiElements/loadingSpinner/lo
 import {useHttpClient} from '../../shared/hooks/http-hook';
 
 
-
 const UserPlaces = () => {
   const [loadedPlaces, setLoadedPlaces] = useState();
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -18,33 +17,32 @@ const UserPlaces = () => {
       try {
         const responseData = await sendRequest(
           `http://localhost:8080/api/places/user/${userId}`
-          );
-          setLoadedPlaces(responseData.places);
-        } catch (err) {}
-      };
-      fetchPlaces();
-    }, [sendRequest, userId]);
-  
-    const placeDeletedHandler = deletedPlaceId => {
-      setLoadedPlaces(prevPlaces =>
-        prevPlaces.filter(place => place.id !== deletedPlaceId)
-      );
+        );
+        setLoadedPlaces(responseData.places);
+      } catch (err) {}
     };
-  
-    return (
-      <React.Fragment>
-        <ErrorModal error={error} onClear={clearError} />
-        {isLoading && (
-          <div className="center">
-            <LoadingSpinner />
-          </div>
-        )}
-        {!isLoading && loadedPlaces && (
-          <PlaceList items={loadedPlaces} onDeletePlace={placeDeletedHandler} />
-        )}
-      </React.Fragment>
+    fetchPlaces();
+  }, [sendRequest, userId]);
+
+  const placeDeletedHandler = deletedPlaceId => {
+    setLoadedPlaces(prevPlaces =>
+      prevPlaces.filter(place => place.id !== deletedPlaceId)
     );
   };
-  
-  export default UserPlaces;
-  
+
+  return (
+    <React.Fragment>
+      <ErrorModal error={error} onClear={clearError} />
+      {isLoading && (
+        <div className="center">
+          <LoadingSpinner />
+        </div>
+      )}
+      {!isLoading && loadedPlaces && (
+        <PlaceList items={loadedPlaces} onDeletePlace={placeDeletedHandler} />
+      )}
+    </React.Fragment>
+  );
+};
+
+export default UserPlaces;

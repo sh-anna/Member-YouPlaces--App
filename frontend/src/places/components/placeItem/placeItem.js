@@ -109,6 +109,7 @@ const PlaceItem = props => {
         </Card>
       </li>
     </React.Fragment>
+    
   );
 };
 
