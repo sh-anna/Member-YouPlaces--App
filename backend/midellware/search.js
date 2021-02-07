@@ -1,13 +1,20 @@
 
-
-// const search = await Post.find({
-    
-// })
 app.get('/api/places' , (req, res) => {
-    const places = await Post.find(req.query);
+    const serachPlaces = await Post.find(req.query);
 });
 
 db.users.find({}, { 
     title: true, 
     description: true,
     address: true })
+
+
+    router.get('/', function(req, res, next) {
+        var searchPlace = get("/api/places");
+        res.render('place', place, places, placesRoutes);
+      });
+
+
+
+
+      
