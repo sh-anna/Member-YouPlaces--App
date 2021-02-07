@@ -1,0 +1,19 @@
+.search-form {
+    width: 110px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: white;
+    background-image: url('./img/searchicon.png');
+    background-size: 25px;
+    background-position: left; 
+    background-repeat: no-repeat;
+    padding: 10px 15px 10px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* input[type=text]:focus {
+    width: 50%;
+  } */

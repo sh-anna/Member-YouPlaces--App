@@ -13,6 +13,7 @@ import Auth from './user/pages/auth/auth';
 import MainNavigation from './shared/components/navigation/mainNavigatin/mainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
+import {Search} from './shared/components/search/search';
 import './App.css';
 
 const App = () => {
@@ -36,6 +37,9 @@ const App = () => {
           <UpdatePlace />
         </Route>
         <Redirect to="/" />
+        <Route path="places/search">
+          <Search/>
+        </Route>
       </Switch>
     );
   } else {
@@ -70,7 +74,9 @@ const App = () => {
         <main>{routes}</main>
       </Router>
     </AuthContext.Provider>
+    
   );
+  
 };
 
 export default App;
