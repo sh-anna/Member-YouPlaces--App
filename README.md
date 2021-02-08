@@ -11,32 +11,20 @@ in the client directory Member-YouPlaces--App/frontend/
 run
 npm i
 
-Start the development react server (hosting development frontend) + express server (hosting backend) by running this in project root directory Member-YouPlaces--App/
-npm run dev
-
-OR
-
-run both servers manually in two different terminals. (from project root directory)
-/frontend    npm run 
-/backend    npm run 
+Start the development react server 
+----------------------------------
+(hosting development frontend) + express server (hosting backend) by running both servers manually in two different terminals. (from project root directory):
+- client
+Member-YouPlaces--App/frontend
+npm run 
+-server
+Member-YouPlaces--App/backend
+npm run 
 
 Also, start the mongoDB server for connecting server with database.
 
-(OPTIONAL) To run the project in production mode. (as will be deployed)
-
-build the react project (in Member-YouPlaces--App/frontend//)
-run : npm run build
-
-a new build/ folder will be created in the client directory.
-
-add this line to out .env file
-
-NODE_ENV=production
-
-finally in the project root directory run
-npm run server
-
 Available Scripts
+--------------------
 In the project directory, you can run:
 
 npm run dev
