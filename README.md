@@ -1,25 +1,29 @@
 # Member-YouPlaces--App
 
 A web application allowing users to list and show their places, view other user places and coordination in map.
+Session-based authentication
+Sign up/Sign in/Sign out API
+Authentication via email/password
 
 Technologies We're using at the moment!
 ----------------------------------------
--React, Node, Express, MongoDB ( + mongoose)
--Role based user authentication
--JWT Http-Only Cookie Storage, BCrypt, JSON-validator
--SCSS (For styling)
--React-Router/ React-Icons/ React-Modal
+-React, Node, Express, MongoDB ( + mongoose).
+-Role based user authentication.
+-JWT Http-Only Cookie Storage, BCrypt, JSON-validator.
+-SCSS (For styling).
+-React-Router/ React-Icons/ React-Modal.
 
 Installation
 -------------
 $ npm install
 
 Getting the Project Up and running
-In the project root directory Member-YouPlaces--App/
+
+In the project root directory Member-YouPlaces--App/.
 run
 npm i
 
-in the client directory Member-YouPlaces--App/frontend/
+in the client directory Member-YouPlaces--App/frontend/.
 run
 npm i
 
