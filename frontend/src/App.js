@@ -13,11 +13,13 @@ import Auth from './user/pages/auth/auth';
 import MainNavigation from './shared/components/navigation/mainNavigatin/mainNavigation';
 import { AuthContext } from './shared/context/auth-context';
 import { useAuth } from './shared/hooks/auth-hook';
-import {Search} from './shared/components/search/search';
+import Search from './shared/components/search/search';
+import Footer from './shared/components/navigation/footer/footer';
 import './App.css';
 
 const App = () => {
   const { token, login, logout, userId } = useAuth();
+  
 
   let routes;
 
@@ -72,7 +74,9 @@ const App = () => {
       <Router>
         <MainNavigation />
         <main>{routes}</main>
+        <Footer/>
       </Router>
+      
     </AuthContext.Provider>
     
   );
