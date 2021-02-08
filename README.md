@@ -1,6 +1,18 @@
 # Member-YouPlaces--App
 
-React,Node.js, Express & MongoDB 
+A web application allowing users to list and show their places, view other user places and coordination in map.
+
+Technologies We're using at the moment!
+----------------------------------------
+-React, Node, Express, MongoDB ( + mongoose)
+-Role based user authentication
+-JWT Http-Only Cookie Storage, BCrypt, JSON-validator
+-SCSS (For styling)
+-React-Router/ React-Icons/ React-Modal
+
+Installation
+-------------
+$ npm install
 
 Getting the Project Up and running
 In the project root directory Member-YouPlaces--App/
@@ -11,8 +23,8 @@ in the client directory Member-YouPlaces--App/frontend/
 run
 npm i
 
-Start the development react server 
-----------------------------------
+Running the app
+----------------
 (hosting development frontend) + express server (hosting backend) by running both servers manually in two different terminals. (from project root directory):
 - client
 Member-YouPlaces--App/frontend
@@ -23,7 +35,7 @@ npm run
 
 Also, start the mongoDB server for connecting server with database.
 
-Available Scripts
+Start the development react server 
 --------------------
 In the project directory, you can run:
 
@@ -46,3 +58,8 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
+
+
+Author
+-------
+Anna Sharipkin
