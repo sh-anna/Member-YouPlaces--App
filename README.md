@@ -29,6 +29,7 @@ Running the app
 - client
 Member-YouPlaces--App/frontend
 npm run 
+
 -server
 Member-YouPlaces--App/backend
 npm run 
