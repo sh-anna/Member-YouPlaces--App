@@ -1,9 +1,5 @@
 import React from 'react';
-// import { Link } from "react-router-dom";
-// import Avatar from "../avatar/avatar";
-// import "../../../../user/components/userItem/userItem.css";
 import './card.css';
-
 
 const Card = props => {
   return (
